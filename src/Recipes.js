@@ -11,9 +11,23 @@ class Recipes {
         this.Beta=false
     }
 
-    callQuery() {
-        var queryCall = this.baseURI + "?type=" + this.Type + "&beta=" + this.Beta.toString()// + "&q=" + q + "&app_id=" + AppID + "&app_key=" + AppKey
-        return queryCall
+    callQuery(query) {
+        var queryCall
+        let q = query
+        queryCall = this.baseURI + "?type=" + this.Type + "&beta=" + this.Beta.toString() + "&q=" + q + "&app_id=" + this.AppID + "&app_key=" + this.AppKey
+        try {
+            console.log(queryCall)
+            fetch(queryCall).then(Response => {
+                Response.json().then(data => {
+                    console.log(data)
+                })
+            })
+        } catch(err) {
+            console.log("Error calling api:\n")
+            console.log(err)
+        }
+        console.error("query needs string")
+        console.log(query)
     }
 
 }

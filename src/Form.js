@@ -14,14 +14,14 @@ class Form extends React.Component {
 
     getData = () => {
         var rec = new Recipes()
-        console.log(rec.callQuery())
+        console.log(rec.callQuery(this.state._fieldValue))
     }
 
     _submitForm = (e) => {
         var rec = new Recipes()
         
         console.log(this.state._fieldValue)
-        console.log(rec.callQuery())
+        console.log(rec.callQuery(this.state._fieldValue))
     }
 
     _updateField = (e) => {
