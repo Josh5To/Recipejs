@@ -1,20 +1,21 @@
 import React from "react"
+import ResultsModule from "./ResultsModule.js"
 
 class Results extends React.Component {
 
     handleChange = (e) => {
         this.setState({
-            fieldValue: e.target.value
+            
         })
-        this.props.updateField(e)
-    }
+    }  
+    //<textarea value={this.props.otherData}></textarea>
 
     render() {
         return (
-            <label>
-                Ingredient:
-                <input type="text" value={this.state.fieldValue} onChange={this.handleChange}></input>
-            </label>
+            <div className="results">
+                <ResultsModule resultsInfo={this.props.resultsData}/>
+                
+            </div>
         )
     }   
 }

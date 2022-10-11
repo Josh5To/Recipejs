@@ -17,10 +17,12 @@ class Field extends React.Component {
 
     render() {
         return (
-            <label>
-                Ingredient:
-                <input type="text" value={this.state.fieldValue} onChange={this.handleChange}></input>
-            </label>
+            <div className="search-field">
+                <label style={{textAlign: "center"}}>
+                    Ingredient:
+                    <input type="text" value={this.state.fieldValue} onChange={this.handleChange} style={{width: "100%"}}></input>
+                </label>
+            </div>
         )
     }   
 }
