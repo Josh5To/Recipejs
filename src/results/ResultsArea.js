@@ -1,4 +1,5 @@
 import React from "react"
+import { Container, Row } from "react-bootstrap"
 import ResultsModule from "./ResultsModule.js"
 
 class Results extends React.Component {
@@ -8,14 +9,14 @@ class Results extends React.Component {
             
         })
     }  
-    //<textarea value={this.props.otherData}></textarea>
 
     render() {
         return (
-            <div className="results">
-                <ResultsModule resultsInfo={this.props.resultsData}/>
-                
-            </div>
+            <Container className="results">
+                <Row className="results-area">
+                    <ResultsModule recipeArray={this.props.resultsDataArray}/>
+                </Row>
+            </Container>    
         )
     }   
 }

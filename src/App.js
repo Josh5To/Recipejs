@@ -1,12 +1,15 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Form from './Form'
+import Main from './Main'
+import { Container } from 'react-bootstrap';
+import Header from './Header';
 
 function App() {
   return (
-    <div className="main">
-      <Form/>
-    </div>
+      <Container>
+        <Header/>
+        <Main/>
+      </Container>
   );
 }
 

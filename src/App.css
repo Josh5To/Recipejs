@@ -1,28 +1,7 @@
 body {
   background-color: rgba(5, 24, 24, 0.736);
 }
-main {
-  display: grid;
-  grid-template-columns: repeat(5, 20vw);
-  grid-template-rows: repeat(5, 20vh);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px; 
-}
-.search-area {
-   grid-area: 1 / 3 / 2 / 4;
-   display: grid;
-}
-.search-area button {
-  justify-self: center;
-  width: 50%;
-}
 
-.search-field {
-  display: grid;
-}
-
-.results {
-  display: grid;
-  background: cadetblue;
-  grid-area: 3 / 2 / 6 / 5;
+.header div {
+  text-align: center;
 }

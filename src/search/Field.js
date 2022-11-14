@@ -1,4 +1,5 @@
 import React from "react"
+import { Form } from "react-bootstrap"
 
 class Field extends React.Component {
     constructor(props) {
@@ -19,8 +20,7 @@ class Field extends React.Component {
         return (
             <div className="search-field">
                 <label style={{textAlign: "center"}}>
-                    Ingredient:
-                    <input type="text" value={this.state.fieldValue} onChange={this.handleChange} style={{width: "100%"}}></input>
+                    <Form.Control value={this.state.fieldValue} onChange={this.handleChange} style={{width: "100%"}} placeholder="Ingredients..."/>
                 </label>
             </div>
         )
